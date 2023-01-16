@@ -1,0 +1,86 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.calculator {
+  position: relative;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 440px;
+  height: 660px;
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(6, 100px);
+  grid-gap: 10px;
+  grid-template-areas: "header header header header "
+  "sidebar sidebar sidebar sidebar "
+  "n n n equ"
+  "n n n equ"
+  "n n n equ"
+  "n n n equ"
+}
+
+.display {
+margin-top: 10px;
+margin-left: 10px;
+  background-color: aqua;
+  border: 1px solid black;
+  grid-area: header;
+  margin-bottom: 5px;
+  font-size: 2rem;
+}
+.functionality{
+  margin-left: 10px;
+
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: row;
+ 
+  justify-content: space-around;
+  
+}
+.functionality button{
+  height: 100px;
+  width: 100px;
+  background-color: #b8b5b0;
+    font-size: 3.5rem;
+  
+  border-radius: 5px;
+
+}
+.numbers{
+  margin-left: 10px;
+
+    grid-area: n;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(4, 100px);
+    grid-gap: 8px;
+    border-radius: 5px;
+
+    
+  
+}
+.numbers button{
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 3.5rem;
+
+
+}
+.equal{
+  height: 425px;
+  grid-area: equ;
+  font-size: 5rem;
+
+  border: 2px solid black;
+  border-radius: 5px;
+}
